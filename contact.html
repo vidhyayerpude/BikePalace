@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bike Palace</title>
+    <link rel="stylesheet" href="bike.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        nav {
+            width: 100%;
+            background-color: black;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ccc;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Page Heading */
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            color: #333;
+        }
+
+        /* Contact Form */
+        form {
+            background-color: white;
+            padding: 20px;
+            max-width: 500px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        /* Map Section */
+        .map-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a class="logo" href="#">Bike Palace</a></li>
+            <li><a class="navigation" href="#home">Home</a></li>
+            <li><a class="navigation" href="index.html#features">Features</a></li>
+            <li><a class="navigation" href="shop.html">Shop</a></li>
+            <li><a class="navigation" href="index.html#clients">News</a></li>
+            <li><a class="navigation" href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Heading -->
+    <h1>Contact Us</h1>
+
+    <!-- Contact Form -->
+    <form action="">
+        <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required />
+        <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required />
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" required />
+        <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <!-- Map Section -->
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60253.32703583337!2d80.135641891938!3d21.8158275206836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2c83fbc4c49fc5%3A0xf70c7ae6cf2a3585!2sBalaghat%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1702387333535!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</body>
+
+</html>

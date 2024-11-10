@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bike.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/60d07f59bd.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    * {
+        body {
+            background-color: gray;
+        }
+    }
+
+    .logo {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-size: 50px;
+        font-style: normal;
+        text-decoration: none;
+        color: white;
+
+    }
+
+    
+
+    nav ul {
+        list-style: none;
+        display: inline-block;
+        background-color: black;
+        width: 100%;
+
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 30px;
+    }
+
+
+    li {
+        display: inline-block;
+    }
+
+    body {
+        background-color: rgb(71, 69, 69);
+    }
+
+
+    #menu {
+        color: white;
+        float: inline-end;
+        margin: 10px;
+        padding: 10px;
+
+
+    }
+
+    #menu i {
+        height: 60px;
+    }
+
+    body {
+        background-color: rgb(71, 69, 69);
+    }
+
+    .home {
+        background-image: url(../images/bike/bike-1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+        padding: 50px;
+        color: white;
+        float: left;
+        margin-left: 20px;
+        height: 500px;
+        z-index: -1;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .home button {
+        background-color: brown;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    b {
+        /* color: brown; */
+        font-size: 30px;
+    }
+
+    .card {
+        display: inline-block;
+    }
+
+    .sidebar {
+        color: white;
+        float: right;
+        text-align: center;
+        line-height: 30px;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .sidebar p {
+        padding: 30px;
+        margin-left: 10px;
+    }
+
+    .rightbar {
+        color: white;
+        line-height: 30px;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .rightbar p {
+        padding: 20px;
+        margin: 10px;
+    }
+
+
+    .clients {
+        width: 100%;
+        display: inline-block;
+        background-color: gray;
+        text-align: center;
+        color: rgb(223, 209, 209);
+        margin-bottom: 10px;
+        padding: 30px;
+    }
+
+    #card1 {
+        margin: 20px;
+    }
+
+    .clients h4,
+    h3 {
+        color: black;
+    }
+
+    .clients img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .Questions ul {
+        list-style: none;
+        color: white;
+    }
+
+    .Questions~ul li ul li {
+        display: none;
+        color: white;
+
+    }
+
+    .Questions ul li:hover {
+        display: block;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    p:last-child {
+        font-size: 15px;
+    }
+
+    .items {
+        color: rgb(62, 66, 66);
+        font-size: 20px;
+        font-weight: 100;
+        text-align: center;
+        padding: 10px;
+        background-color: white;
+        margin: 20px;
+        border: 4px solid gray;
+        border-radius: 10%;
+    }
+
+    .items img {
+        display: block;
+        /* Ensure images are block elements */
+        margin: 10px auto;
+        /* Center images horizontally */
+        border: 2px solid rgb(38, 36, 36);
+        height: 300px;
+        width: 300px;
+        /* border-radius: 100%; */
+    }
+
+    .items img:hover {
+        box-shadow: 0px 4px 8px green;
+
+    }
+
+    button {
+        /* border: 2px solid black; */
+        /* border-radius: 50px; */
+        background-color: rgb(33, 138, 236);
+        font-size: 15px;
+        color: white;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        gap: 10px;
+    }
+
+   .navigation a:hover {
+        color: red;
+        text-decoration: dotted;
+        box-shadow: 0px 4px 8px;
+    }
+
+    .clients {
+        width: 100%;
+
+    }
+
+    .clients p {
+        font-size: 19px;
+    }
+
+    .footer {
+        background-color: wheat;
+    }
+
+    .social-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-button a {
+        margin-bottom: 0;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        font-size: 20px;
+        outline: 0;
+        line-height: 40px;
+        color: #fff;
+        background-color: #222;
+    }
+
+    .social-button a:hover,
+    .social-button a:focus,
+    .social-button a:active {
+        background-color: aqua;
+    }
+
+    form {
+        font-size: 20px;
+        /* color: blue; */
+        align-items: start;
+        box-sizing: border-box;
+        justify-content: start;
+
+    }
+
+    .faq {
+        /* height: 200px; */
+        width: 100%;
+        color: white;
+        background-color: gray;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .que p {
+        font-size: 30px;
+        pad: 5px;
+        margin: 10px;
+
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="logo" href="#">Bike Palace</a></li>
+            <li><a class="navigation" href="#home">Home</a></li>
+            <li><a class="navigation" href="index.html#features">Features</a></li>
+            <li><a class="navigation" href="shop.html">Shop</a></li>
+            <li><a class="navigation" href="index.html#clients">News</a></li>
+            <li><a class="navigation" href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="home" id="home">
+        <p>Computer-controlled digital transistorized with electronic advance</p>
+        <b>Honda CBR 300R</b>
+        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+            velit mollit. Exercitation veniam consequat sunt nostrud amet</p>
+        <button> <a href="shop.html">Purchase <i class="fa-solid fa-cart-shopping"></i></a></button>
+    </div> <br><br><br><br>
+    <!-- <div class="card">
+        <img src="../images/bike/bike-2.png" alt="" height="400px" width="400px">
+        <img src="../images/bike/bike-3.png" alt="" height="400px" width="450px">
+        <img src="../images/bike/bike-4.jpg" alt="" height="400px" width="338px">
+    </div> -->
+    <div class="sidebar" id="features">
+        <b>E EVER</b>
+        <br> <br>
+        <img src="../images/bike/first.jpg" alt="" height="400px" width="400px"
+            style="float: left; margin-right: 20px;">
+        <p><b>Harley-Davidson Motor Company.</b> <br>
+            ABOUT US
+            Harley-Davidson® dealership for the Niagara Frontier and all of Western New York, including Niagara Falls,
+            Tonawanda, Lockport, Kenmore, Williamsville, Buffalo, Lackawanna, Hamburg, East Aurora and Depew.
+
+            We provide a full-line of Harley-Davidson® motorcycles, parts, accessories and apparel. Whether you are just
+            starting to develop an interest in the popular Harley-Davidson® craze or you are a seasoned riding veteran,
+            we have everything you need to "Live to Ride".</p>
+    </div>
+    <div class="rightbar">
+        <p> <br>
+            <b>WELCOME TO AMERICAN HARLEY-DAVIDSON®</b>
+            <br> ABOUT US <br>
+            <img src="../images/bike/new-bike-1.jpg" alt="" height="400px" width="400px"
+                style="float: right; margin-left: 20px;">
+
+            American Harley-Davidson® North Tonawanda, NY is the premier Harley-Davidson® dealership for the Niagara
+            Frontier and all of Western New York, including Niagara Falls, Tonawanda, Lockport, Kenmore, Williamsville,
+            Buffalo, Lackawanna, Hamburg, East Aurora and Depew.
+
+            Harley-Davidson® motorcycles, parts, accessories and apparel. Whether you are just starting to develop an
+            interest in the popular Harley-Davidson® craze or you are a seasoned riding veteran, we have everything you
+            need to "Live to Ride".
+
+
+        </p>
+    </div>
+    <br><br>
+
+    gallery
+    <div class="container" id="container">
+        <div class="items ">bike
+            <img src="../images/bike/bike-1.png" alt="Red Image" height="400px" width="400px">
+            bike <br>
+            Lorem, ipsum dolor. <br>
+            <button type="button"><a href="../images/bike/bike-2.png">view</a></button>
+
+            <button> <a href="info.html">info</a></button>
+        </div>
+        <div class="items ">bike
+            <img src="../images/bike/bike-3.png" alt="Bike">
+            bike <br>
+            Lorem, ipsum dolor. <br>
+            <button type="button"><a href="../images/bike/bike-4.jpg">view</a></button>
+            <button> <a href="info.html">info</a></button>
+
+        </div>
+        <div class="items ">bike
+            <img src="../images/bike/harley-6.jpg" alt="Green Image">
+            bike<br>
+            Lorem, ipsum dolor. <br>
+            <button type="button"><a href="../images/Designer.png">view</a></button>
+            <button> <a href="info.html">info</a></button>
+
+        </div>
+        <div class="items ">bike
+            <img src="../images/bike/harley-4.jpg" alt="Green Image">
+            bike <br>
+            Lorem, ipsum dolor. <br>
+            <button type="button"><a href="../images/Designer.png">view</a></button>
+            <button> <a href="info.html">info</a></button>
+
+        </div>
+        <div class="items ">bike
+            <img src="../images/bike/bike-2.png" alt="Green Image"> bike <br>
+            Lorem, ipsum dolor. <br>
+            <button type="button"><a href="../images/Designer.png">view</a></button>
+            <button> <a href="info.html">info</a></button>
+            <!-- <button> <a href="info.html">info</a></button> -->
+
+
+        </div>
+        <div class="items ">Bike
+            <img src="../images/bike/bike-4.jpg" alt="Bike Image">
+            bike <br>
+            Lorem, ipsum <br>
+            <button><a href="../images/bike/bike-4.jpg">view</a> </button>
+            <button> <a href="info.html">info</a></button>
+
+
+        </div>
+        <br>
+
+        <-- Clints -->
+            <b style="text-align: center; color: red; justify-content: center;">Clients Says</i>
+                <div class="clients" id="clients">
+
+                    <div id="card1">
+                        <img src="../images/bike/clint1.png" alt="">
+                        <p>The HERO Super Splendor XTHEC is a premium vehicle offering enhanced features and technology.
+                            Its refined engine and advanced components deliver superior performance and efficiency on
+                            Indian roads. Hero's widespread service networks including centers in Jaipur. </p>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <h4>Mark Miles</h4>
+                        <h3> Banker</h3>
+                    </div>
+                    <div id="card2">
+                        <img src="../images/bike/user-2.png" alt="">
+                        <p>1. Buying Experience: Let's talk about this first. I purchased this bike from Hero showroom
+                            as they were very prompt to fully set up this bike within 2 hours. I went for the test drive
+                            and ended up purchasing this bike over Trimuph's scrambler 400 X. </p>
+                        <i class="fa-solid fa-star"><i class="fa-solid fa-star"></i></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <h4>Zuck Miles</h4>
+                        <h3>Banker</h3>
+                    </div>
+                    <div id="card3">
+                        <img src="../images/bike/user-3.png" alt="">
+                        <p>Nice bike for daily rides and this bike is very helpful for a middle-class family this bike's
+                            average is also very good and this bike looks very beautiful and this bike is very helpful
+                            for ridding and its speed is also so good and we are also very satisfied to by this bike and
+                            it is a beautiful bike.
+                        </p>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"><i
+                                class="fa-regular fa-star"></i></i>
+                        <h4>Regina Miles</h4>
+                        <h3>Banker</h3>
+                    </div>
+                </div>
+                <div class="Questions">
+                    <h1 style="color: wheat;">Frequently Asked <b> Questions</b></h1> <br>
+                    <img style="float: right;" src="../images/bike/faq.png" alt="" height="300px" width="300px">
+                    <div class="faq">
+                        <div class="ques">
+                            <h3>Why should I book my bike at BikePalace?</h3>
+                            <p>Booking is the only way to immediately block the offers that come with a particular bike
+                                on BikeWale. Once you book your bike at BikeWale, you become entitled to avail any
+                                offers mentioned against the bike model, along with securing the mentioned price for the
+                                bike. Since most offers are limited in number and available for a limited period, you
+                                should use booking option to secure them before they expire.</p>
+
+                        </div>
+                        <div class="ques">
+                            <h3>How can I book a bike on BikePalace?</h3>
+                            <hr>
+                            <p>To book a bike, you have to pay a fixed booking amount online mentioned against the
+                                vehicle of your interest. This amount will be adjusted in the total on-road price of the
+                                bike. Your payment gets transferred to BikeWale through a fully-secured payment gateway.
+                            </p>
+                        </div>
+                        <div class="ques">
+                            <h3>What happens when I book a bike on BikePalace?</h3>
+                            <hr>
+                            <p>On successful receipt of the booking payment, we will immediately send you a Booking
+                                Confirmation receipt on your email and SMS, which contains the following information:
+
+                                Details of your payment
+                                Details of your selected bike (model, version) and the vehicle pricing
+                                Contact details of assigned dealership who will be responsible to complete further
+                                formalities and deliver the vehicle
+                                List of offers that you just secured by booking</p>
+                        </div>
+
+
+                        <!-- <form action="">
+                             <p>Contact form</p> -->
+
+                        <!-- <label for="Name">Name</label>
+                            <input type="text"><br> <br>
+                            <label for="Email">Email</label>&nbsp;&nbsp;&nbsp;
+                            <input type="Email"><br> <br>
+                            <label for="phone no">Number</label>
+                            <input type="number"><br> <br>
+                            <label for="Message">Message</label>
+                            <textarea style="vertical-align: top;" row="10" cols="23" id=""></textarea> <br> <br>
+                            <button>Reset</button>
+
+                            <button>Submit</button>
+                            <button>Cancel</button>
+                        </form> -->
+
+                    </div>
+
+                    <br>
+                </div>
+
+                <div class="footer">
+                    <p style="color: white;">&copy;2020 all rights reserved by vidhya</p>
+
+                    <li><a href="">Licence</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">help</a></li>
+
+                    <!-- <button>open in play store</button>. -->
+                    <a href=""> <img
+                            class="o-bXKmQE o-cgkaRG o-cQfblS o-bNxxEB o-pGqQl o-wBtSi o-bwUciP o-btTZkL o-bfyaNx o-eAZqQI "
+                            src="https://imgd.aeplcdn.com/0x0/cw/static/icons/svg/app-store.svg?v2"
+                            alt="Download BikeWale iOS App" title="Download BikeWale iOS App" height="150px"
+                            width="100px">
+                    </a>
+                    <a href=""> <img
+                            class="o-bXKmQE o-cgkaRG o-cQfblS o-bNxxEB o-pGqQl o-wBtSi o-bwUciP o-btTZkL o-bfyaNx o-eAZqQI "
+                            src="https://imgd.aeplcdn.com/0x0/cw/static/icons/svg/play-store.svg?v2"
+                            alt="Download BikeWale Android App" title="Download BikeWale Android App" height="150px"
+                            width="100px"></a>
+                </div>
+
+
+    </div>
+    <div class="social-button" id="contact">
+        <a href="https:/google.com"><i class="fa fa-twitter"></i></a>
+        <a href="https:/google.com"><i class="fa fa-facebook"></i></a>
+        <a href="https:/google.com"><i class="fa fa-linkedin"></i></a>
+        <br>
+</body>
+
+</html>

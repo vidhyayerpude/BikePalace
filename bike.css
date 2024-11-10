@@ -1,0 +1,280 @@
+
+*{
+    body{
+        background-color: gray;
+    }
+}
+ .logo {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+   
+}
+
+.logo:hover{
+    hover:none;
+}
+nav ul {
+    list-style: none;
+    display: inline-block;
+    background-color: black;
+    width: 100%;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+}
+
+
+li {
+    display: inline-block;
+}
+
+body {
+    background-color: rgb(71, 69, 69);
+}
+
+ 
+#menu{
+    color: white;
+float: inline-end;
+margin: 10px;
+padding: 10px;
+
+
+}
+#menu i{
+    height: 60px;
+}
+body {
+background-color: rgb(71, 69, 69);
+}
+
+.home {
+    background-image: url(../images/bike/bike-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    padding: 50px;
+    color: white;
+    float: left;
+    margin-left: 20px;
+    height: 500px;
+    z-index: -1;
+}
+
+body {
+    background-color: black;
+}
+
+.home button {
+    background-color: brown;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+b {
+    color: brown;
+    font-size: 30px;
+}
+
+.card {
+    display: inline-block;
+}
+
+.sidebar {
+    color: white;
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.sidebar p {
+    padding: 30px;
+    margin-left: 10px;
+}
+
+.rightbar {
+    color: white;
+    line-height: 30px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.rightbar p {
+    padding: 20px;
+    margin: 10px;
+}
+
+
+.clients {
+    width: 100%;
+    display: inline-block;
+    background-color: gray;
+    text-align: center;
+    color: rgb(223, 209, 209);
+    margin-bottom: 10px;
+    padding: 30px;
+}
+
+#card1 {
+    margin: 20px;
+}
+
+.clients h4,
+h3 {
+    color: black;
+}
+
+.clients img {
+    height: 100px;
+    width: 100px;
+}
+
+.Questions ul {
+    list-style: none;
+    color: white;
+}
+
+.Questions~ul li ul li {
+    display: none;
+    color: white;
+
+}
+
+.Questions ul li:hover {
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+p {
+    font-size: 20px;
+}
+p:last-child{
+    font-size: 15px;
+}
+
+.items {
+    color: rgb(62, 66, 66);
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    margin: 20px;
+    border: 4px solid gray;
+    border-radius: 10%;
+}
+
+.items img {
+    display: block;
+    /* Ensure images are block elements */
+    margin: 10px auto;
+    /* Center images horizontally */
+    border: 2px solid rgb(38, 36, 36);
+    height: 300px;
+    width: 300px;
+    /* border-radius: 100%; */
+}
+
+.items img:hover {
+    box-shadow: 0px 4px 8px green;
+
+}
+
+button {
+    /* border: 2px solid black; */
+    /* border-radius: 50px; */
+    background-color: rgb(33, 138, 236);
+    font-size: 15px;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    gap: 10px;
+}
+
+a:hover {
+    color: red;
+    text-decoration: dotted;
+    box-shadow: 0px 4px 8px;
+}
+
+.clients {
+    width: 100%;
+
+}
+
+.clients p {
+    font-size: 19px;
+}
+
+.footer {
+    background-color: wheat;
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+}
+
+.social-button a {
+    margin-bottom: 0;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    outline: 0;
+    line-height: 40px;
+    color: #fff;
+    background-color: #222;
+}
+
+.social-button a:hover,
+.social-button a:focus,
+.social-button a:active {
+    background-color: aqua;
+}
+
+form {
+    font-size: 20px;
+    /* color: blue; */
+    align-items: start;
+    box-sizing: border-box;
+    justify-content: start;
+
+}
+
+.faq {
+    /* height: 200px; */
+    width: 100%;
+    color: white;
+    background-color: gray;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.que p{
+    font-size: 30px;
+    pad: 5px;
+    margin: 10px;
+
+}
