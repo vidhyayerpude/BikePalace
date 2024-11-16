@@ -11,53 +11,61 @@ body {
   color: #ffffff; /* White text for readability on black background */
   line-height: 1.6;
 }
-
-/* Navbar */
-nav {
-  background-color: #ffffff; /* White background for navbar */
-  color: #333333; /* Dark text for navbar */
-  padding: 15px;
-  position: relative;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav .menu-toggle {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-nav ul {
-  list-style: none;
+/* Navigation Bar Styling */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #333; /* Dark background */
+  padding: 10px 20px;
 }
 
-nav ul li {
-  padding: 10px;
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
-nav a {
-  color: #333333; /* Dark text color */
+.navbar-list .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
   text-decoration: none;
-  font-size: 18px;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #5a9bcf; /* Soft blue on hover */
+.navbar-list .logo:hover {
+  color: #f4a261; /* Highlight color on hover */
 }
 
-nav .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2e3a3f; /* Darker color for logo */
+.navigation {
+  font-size: 1rem;
+  color: #ddd;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+.navigation:hover {
+  color: #fff;
+  background-color: #f4a261;
+  border-radius: 5px;
 }
+
+/* Make navigation responsive */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .navbar-list {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
 
 /* Mobile Menu */
 @media screen and (max-width: 768px) {
@@ -90,43 +98,112 @@ nav ul li a:hover {
 
 /* Home Section */
 .home {
-  background-color: #ffffff; /* White background for home section */
+  background-color: #fff;
   text-align: center;
   padding: 50px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeIn 1.5s ease-out;
 }
 
-.home b {
-  font-size: 28px;
-  font-weight: bold;
-  color: #333333; /* Dark gray text for heading */
+/* Animations for Text */
+.animate-text {
+  opacity: 0;
+  animation: fadeInText 1s forwards;
 }
 
-.home p {
-  font-size: 18px;
-  margin-top: 20px;
-  color: #666666; /* Slightly lighter gray text */
+.animate-text:nth-child(1) {
+  animation-delay: 0.3s;
 }
 
-.home button {
-  background-color: #5a9bcf; /* Soft blue for buttons */
-  color: #ffffff; /* White text on buttons */
-  border: none;
-  padding: 12px 30px;
-  font-size: 18px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 5px;
+.animate-text:nth-child(2) {
+  animation-delay: 0.5s;
 }
 
-.home button a {
-  color: #ffffff;
+.animate-text:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.animate-text:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+/* Fade-in Text Animation */
+@keyframes fadeInText {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Image Fade-in Animation */
+.animate-img {
+  opacity: 0;
+  animation: fadeInImage 1.5s forwards;
+  animation-delay: 1s; /* Delay for image */
+}
+
+@keyframes fadeInImage {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Button Slide-in Animation */
+.animate-button {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s forwards;
+  animation-delay: 1.2s; /* Delay for button */
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Button Hover Animation */
+.animate-button a {
+  color: #fff;
   text-decoration: none;
+  padding: 12px 30px;
+  background-color: #1837e5;
+  border-radius: 5px;
+  font-size: 18px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.home button:hover {
-  background-color: #3b82b2; /* Darker blue on hover */
+.animate-button:hover a {
+  background-color: #d88f20;
+  transform: scale(1.05); /* Button scale effect */
+}
+
+/* Fade-In Animation for the Entire Home Section */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }
 
 /* Sidebar & Rightbar */
@@ -280,157 +357,92 @@ nav ul li a:hover {
   border-top: 2px solid #5a9bcf; /* Soft blue divider */
   margin: 20px 0;
 }
-/* Footer Styling */
+
+/* Footer */
 .footer {
   background-color: #111111; /* Dark background for footer */
-  color: #ffffff; /* White text for footer */
+  color: #ffffff; /* White text on footer */
   padding: 40px 20px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin-top: 50px;
-  animation: fadeIn 2s ease-in;
 }
 
-.footer p {
-  font-size: 16px;
-  color: #cccccc; /* Light gray text for small footer text */
-  margin-bottom: 20px;
-  animation: textFade 2s ease-in;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.footer-links li {
-  display: inline-block;
-}
-
-.footer-links a {
-  color: #ffffff; /* White links */
-  font-size: 18px;
+.footer a {
+  color: #ffffff; /* White text for links */
   text-decoration: none;
-  position: relative;
-  padding: 5px 0;
+  margin: 0 15px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
-.footer-links a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #5a9bcf; /* Soft blue underline */
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.footer-links a:hover {
+.footer a:hover {
   color: #5a9bcf; /* Soft blue on hover */
+  text-decoration: underline;
 }
 
-.footer-links a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.footer img {
+  margin-top: 20px;
+  width: 100px;
+  height: auto;
 }
 
-/* App Store and Play Store Buttons */
-.app-buttons {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.store-img {
-  transition: transform 0.3s ease;
-}
-
-.store-img:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+.footer p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #cccccc; /* Light gray text for small footer text */
 }
 
 /* Social Buttons */
-.social-button {
-  margin-top: 30px;
-}
-
-.social-icon {
+.social-button a {
   font-size: 30px;
   margin: 10px;
-  color: #ffffff; /* White icons */
-  transition: color 0.3s ease, transform 0.3s ease;
+  color: #ffffff; /* White social icons */
+  transition: color 0.3s ease;
 }
 
-.social-icon:hover {
-  color: #5a9bcf; /* Soft blue on hover */
-  transform: scale(1.2); /* Slight zoom effect on hover */
+/* Mobile responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .sidebar, .rightbar {
+      width: 100%;
+      margin: 20px 0;
+  }
+
+  .clients {
+      flex-direction: column;
+  }
+
+  .items {
+      width: 100%;
+  }
+
+  nav a {
+      font-size: 16px;
+  }
+
+  .footer {
+      padding: 30px 10px;
+  }
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
+/* Extra small screens (mobile) */
+@media screen and (max-width: 600px) {
+  nav a {
+      font-size: 14px;
   }
-  to {
-      opacity: 1;
-  }
-}
 
-@keyframes textFade {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media screen and (max-width: 768px) {
   .container {
       flex-direction: column;
       align-items: center;
   }
 
   .items {
-      width: 90%;
-  }
-
-  .clients {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .clients div {
-      margin-bottom: 20px;
-  }
-
-  .sidebar, .rightbar {
       width: 100%;
-      margin: 20px 0;
+      padding: 15px;
   }
-}
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
+  .footer {
+      font-size: 12px;
   }
-  to {
-      opacity: 1;
-  }
-}
-
-.home, .container, .clients, .footer {
-  animation: fadeIn 2s ease-in;
 }
