@@ -111,118 +111,112 @@ body {
       padding: 10px 0;
   }
 }
+/* Reset basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Home Section */
-.home {
-  background-color: #fff;
-  text-align: center;
-  padding: 50px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-  border-radius: 10px;
+/* Main section styles */
+/* Reset basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main section styles */
+.hero {
   position: relative;
-  animation: fadeIn 1.5s ease-out;
+  height: 100vh; /* Full viewport height */
+  background-color: #000; /* Black background to enhance the bike image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Animations for Text */
-.animate-text {
-  opacity: 0;
-  animation: fadeInText 1s forwards;
+/* Hero content */
+.hero-content {
+  text-align: center;
+  position: relative;
 }
 
-.animate-text:nth-child(1) {
-  animation-delay: 0.3s;
+/* Image styles */
+.hero-image {
+  width: 100%; /* Make image fill the container width */
+  height: auto;
+  max-height: 90%; /* Limit the height to 90% of the viewport */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  animation: zoomIn 2s ease-out;
 }
 
-.animate-text:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.animate-text:nth-child(3) {
-  animation-delay: 0.7s;
-}
-
-.animate-text:nth-child(4) {
-  animation-delay: 0.9s;
-}
-
-/* Fade-in Text Animation */
-@keyframes fadeInText {
-  from {
+/* Animation for the image */
+@keyframes zoomIn {
+  0% {
+      transform: scale(0);
       opacity: 0;
-      transform: translateY(20px);
   }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-/* Image Fade-in Animation */
-.animate-img {
-  opacity: 0;
-  animation: fadeInImage 1.5s forwards;
-  animation-delay: 1s; /* Delay for image */
-}
-
-@keyframes fadeInImage {
-  from {
-      opacity: 0;
-      transform: scale(0.8);
-  }
-  to {
-      opacity: 1;
+  100% {
       transform: scale(1);
-  }
-}
-
-/* Button Slide-in Animation */
-.animate-button {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideIn 1s forwards;
-  animation-delay: 1.2s; /* Delay for button */
-}
-
-@keyframes slideIn {
-  from {
-      opacity: 0;
-      transform: translateY(30px);
-  }
-  to {
       opacity: 1;
-      transform: translateY(0);
   }
 }
 
-/* Button Hover Animation */
-.animate-button a {
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 30px;
-  background-color: #1837e5;
-  border-radius: 5px;
+/* Button styles */
+.cta-button {
+  margin-top: 20px;
+  padding: 15px 30px;
   font-size: 18px;
-  display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  background-color: #4caf50; /* Kawasaki Green */
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.animate-button:hover a {
-  background-color: #d88f20;
-  transform: scale(1.05); /* Button scale effect */
+/* Hover effect on button */
+.cta-button:hover {
+  background-color: #388e3c;
 }
 
-/* Fade-In Animation for the Entire Home Section */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .hero {
+      height: 80vh; /* Slightly smaller on mobile */
   }
-  to {
-      opacity: 1;
+
+  .hero-image {
+      max-height: 80%; /* Adjust the image size on smaller screens */
+  }
+
+  .cta-button {
+      font-size: 16px;
+      padding: 12px 25px;
   }
 }
 
-/* Sidebar & Rightbar */
+@media (max-width: 480px) {
+  .hero {
+      height: 70vh; /* Adjust height for smaller screens */
+  }
+
+  .hero-image {
+      max-height: 70%; /* Even smaller on very small screens */
+  }
+
+  .cta-button {
+      font-size: 14px;
+      padding: 10px 20px;
+      background-color: red;
+      color: wheat;
+  }
+}
+
+
 /* General Styles */
 .sidebar-section {
   display: flex;

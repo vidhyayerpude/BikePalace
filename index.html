@@ -9,6 +9,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/60d07f59bd.js" crossorigin="anonymous"></script>
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+<!-- Animate.css -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
 
 </head>
 
@@ -24,16 +34,18 @@
             <li><a class="navigation" href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-    
-    <div class="home" id="home">
-        <p class="animate-text">Computer-controlled digital transistorized with electronic advance</p>
-        <img src="img/harley-1.jpg" alt="Honda CBR 300R" class="animate-img" height="400px" width="400px">
-        <br>
-        <b class="animate-text">Honda CBR 300R</b>
-        <p class="animate-text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet</p>
-        <button class="animate-button"><a href="shop.html">Purchase <i class="fa-solid fa-cart-shopping"></i></a></button>
-    </div>
-    <div class="sidebar-section">
+    <section class="hero">
+        <div class="hero-content">
+            <img src="img/kawa1.jpg" alt="Kawasaki Bike" class="hero-image">
+            <br>
+            <a href="shop.html" class="cta-button">Discover</a>
+        </div>
+    </section>
+      
+      <!-- Link to Animate.css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      
+       <div class="sidebar-section">
         <div class="sidebar animate__animated animate__fadeInLeft" id="features">
           <img src="img/harley-1.jpg" alt="Harley Davidson" class="sidebar-img">
           <p>
@@ -45,16 +57,15 @@
         </div>
       
         <div class="rightbar animate__animated animate__fadeInRight">
-          <p>
-            <b>WELCOME TO AMERICAN HARLEY-DAVIDSON®</b><br><br>
-            <strong>ABOUT US</strong><br>
-          </p>
+         
           <img src="img/harley-4.jpg" alt="American Harley Davidson" class="rightbar-img">
-          <p>
+          <b>WELCOME TO AMERICAN HARLEY-DAVIDSON®</b><br><br>
+            <strong>ABOUT US</strong><br> <p>
             American Harley-Davidson® North Tonawanda, NY is the premier Harley-Davidson® dealership for the Niagara Frontier
             and all of Western New York, including Niagara Falls, Tonawanda, Lockport, Kenmore, Williamsville, Buffalo,
             Lackawanna, Hamburg, East Aurora and Depew.
           </p>
+         
         </div>
       </div><div class="container" id="container">
         <div class="items animate__animated animate__zoomIn">
@@ -99,7 +110,22 @@
           <button><a href="images/bike/bike-4.jpg">view</a></button>
           <button><a href="info.html">info</a></button>
         </div>
+ 
+      <div class="items animate__animated animate__zoomIn">
+        <p>bike</p>
+        <img src="img/kawa.jpeg" alt="Red Bike" class="item-img">
+        <p>bike <br> Lorem, ipsum dolor.</p>
+        <button type="button"><a href="img/kawa.jpeg">view</a></button>
+        <button><a href="info.html">info</a></button>
       </div>
+      <div class="items animate__animated animate__zoomIn">
+        <p>bike</p>
+        <img src="img/bike-4.jpg" alt="Bike" class="item-img">
+        <p>bike <br> Lorem, ipsum dolor.</p>
+        <button type="button"><a href="img/bike-4.jpg">view</a></button>
+        <button><a href="info.html">info</a></button>
+      </div>     </div>
+     
       
         <br>
         <section class="client-section">
@@ -173,7 +199,26 @@
                                 </div>
                               </div>
                                        <script src="script.js"></script>
-
+                                       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                                       <script>
+                                         const swiper = new Swiper('.swiper-container', {
+                                           loop: true,
+                                           navigation: {
+                                             nextEl: '.swiper-button-next',
+                                             prevEl: '.swiper-button-prev',
+                                           },
+                                           pagination: {
+                                             el: '.swiper-pagination',
+                                             clickable: true,
+                                           },
+                                           autoplay: {
+                                             delay: 3000,
+                                             disableOnInteraction: false,
+                                           },
+                                           effect: 'fade', // Add smooth fade effect
+                                         });
+                                       </script>
+                                       
                 </body>
                 
 
